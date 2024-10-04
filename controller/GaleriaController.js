@@ -1,8 +1,6 @@
-import { kep_lista } from "../model/adatModell.js";
 import GaleriaModell from "../model/GaleriaModell.js";
 import GaleriaMegjelenito from "../view/GaleriaMegjelenito.js";
-import KisKep from "../view/KisKep.js";
-import NagyKep from "../view/NagyKep.js";
+import KepMegjelenito from "../view/KepMegjelenito.js";
 
 
 export default class GaleriaController{
@@ -11,7 +9,14 @@ export default class GaleriaController{
 
     constructor(){
         this.galeria_megjelenit = new GaleriaMegjelenito();
-        this.galeria_modell = new GaleriaModell(this.galeria_megjelenit);
+        this.galeria_modell = new GaleriaModell();
+        this.galeria_megjelenit.megjelenit();
+
+        this.kep_megjelenit = new KepMegjelenito();
+        
+        this.kep_megjelenit.megjelenitKicsik(this.galeria_modell.get_galleria_lista());
+        this.kep_megjelenit.megjelenitNagy(this.galeria_modell.get_galleria_lista());
+
 
     }
     

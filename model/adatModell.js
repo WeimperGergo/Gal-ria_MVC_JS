@@ -12,7 +12,7 @@ export const kep_lista = [
     {
         nev: "3. kép",
         id: 2,
-        forras: "..res/bo2_3.jpg"
+        forras: "../res/bo2_3.jpg"
     },
     {
         nev: "4. kép",

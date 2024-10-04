@@ -4,3 +4,29 @@
     box-sizing: border-box;
 }
 
+#galeria_div{
+    grid-template-areas: 
+    "ba nk nk nk jo"
+    "kk kk kk kk kk"
+    ;
+}
+
+#balra{
+    border: 1px solid black; 
+    grid-area: ba
+}
+
+#jobbra{
+    border: 1px solid black; 
+    grid-area: jo
+}
+
+#nagyKepElem{
+    width: 800px;
+    height: 600px;
+    grid-area: nk
+}
+
+#kisKepekElem{
+    grid-area: kk;
+}
